@@ -9,8 +9,8 @@ import { isBlobUrl } from '@shared/utils/string-helper';
 import { bindFileAvatarAttachUUID } from './file';
 import { ActorItem } from './actor';
 import { ModelAccess } from './types';
-import { PlayerUser } from './player';
 import { ChatLogItem } from './chat';
+import { GroupActorItem } from '@shared/types/group';
 
 export interface GroupItem {
   uuid: string;
@@ -26,20 +26,6 @@ export interface GroupItem {
   managers_uuid: string[];
   maps_uuid: string[];
   rule: string;
-}
-
-export interface GroupActorItem {
-  uuid: string;
-  actor_uuid: string;
-  actor_info: {};
-  actor_template_uuid: string;
-  name: string;
-  desc: string;
-  avatar: string;
-  passed: boolean;
-  enabled: boolean;
-
-  owner?: PlayerUser;
 }
 
 /**
@@ -75,14 +61,6 @@ export const fetchGroupActorList = async (
   const { data } = await request.get(`/group/${groupUUID}/actor/list`);
 
   return data.list;
-};
-
-export const fetchGroupActorDetail = async (
-  groupActorUUID: string
-): Promise<GroupActorItem> => {
-  const { data } = await request.get(`/group/actor/detail/${groupActorUUID}`);
-
-  return data.groupActor;
 };
 
 /**

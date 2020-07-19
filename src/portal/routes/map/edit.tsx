@@ -7,7 +7,7 @@ import React, {
 } from 'react';
 import { TiledMap } from '@shared/components/tiledmap';
 import { RouteComponentProps } from 'react-router-dom';
-import { fetchGroupActorList, GroupActorItem } from '@portal/model/group';
+import { fetchGroupActorList } from '@portal/model/group';
 import _isNil from 'lodash/isNil';
 import _isFunction from 'lodash/isFunction';
 import SplitPane from '@shared/components/web/SplitPane';
@@ -18,6 +18,7 @@ import { TMemo } from '@shared/components/TMemo';
 import { TokenPicker } from './tools/TokenPicker';
 import styled from 'styled-components';
 import { Connects } from './tools/Connects';
+import { GroupActorItem } from '@shared/types/group';
 
 const TiledMapContainer = styled.div`
   height: 100%;

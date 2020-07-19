@@ -2,7 +2,6 @@ import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import {
   fetchGroupActorList,
-  GroupActorItem,
   applyGroupActor,
   agreeGroupActor,
   refuseGroupActor,
@@ -17,6 +16,7 @@ import { Modal, notification, Tabs } from 'antd';
 import ActorSelect from '@portal/components/ActorSelect';
 import GroupActorApprovalCard from '@portal/components/GroupActorApprovalCard';
 import { nav } from '@portal/history';
+import { GroupActorItem } from '@shared/types/group';
 
 const { TabPane } = Tabs;
 

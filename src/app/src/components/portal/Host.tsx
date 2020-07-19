@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, Fragment } from 'react';
 import { DeviceEventEmitter, NativeEventEmitter, View } from 'react-native';
 import { useEffect } from 'react';
-import { TMemo } from '../TMemo';
+import { TMemo } from '@shared/components/TMemo';
 import PortalManager from './Manager';
 
 type Operation =
